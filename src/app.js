@@ -40,7 +40,7 @@ app.get("/", (req, res) => {
     res.status(400).send("Enter a name");
   } else if (name) {
     res.status(200).send(`Hello, ${name}`);
-  } else if (users) {
+  } else if (users === "") {
     console.log(getUsers());
     res.status(200).json(getUsers());
   }
