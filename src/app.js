@@ -27,7 +27,7 @@
 
 import express from "express";
 import http from "http";
-import { getUsers } from "./module/users.js";
+import usersJson from "./data/users.json" with {type: "json"}
 
 const PORT = 3000;
 const app = express();
@@ -41,8 +41,7 @@ app.get("/", (req, res) => {
   } else if (name) {
     res.status(200).send(`Hello, ${name}`);
   } else if (users === "") {
-    console.log(getUsers());
-    res.status(200).json(getUsers());
+     res.status(200).json(usersJson);
   }
   if (Object.keys(req.query).length) {
     res.status(500).send("");
