@@ -22,7 +22,6 @@
 // });
 
 // server.listen(PORT, "localhost", () => {
-//   console.log(`Сервер запущен ${PORT}`);
 // });
 
 import express from "express";
